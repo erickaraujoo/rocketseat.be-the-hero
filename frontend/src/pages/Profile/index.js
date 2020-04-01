@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom';
 import { FiPower, FiTrash } from 'react-icons/fi'
 
-import api from './../services/api';
+import api from '../../services/api';
 
 import './styles.css';
 

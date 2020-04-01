@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom'
 import logoImg from './../../assets/logo.svg';
 import { FiArrowLeft } from 'react-icons/fi';
 
-import api from './../services/api';
+import api from '../../services/api';
 
 import './styles.css';
 
@@ -78,7 +78,7 @@ export default function NewIncident() {
                         value={value}
                         onChange={e => setValue(e.target.value)}
                     />
-                    
+
                     <button className="button" type="submit">Cadastrar</button>
                 </form>
             </div>
