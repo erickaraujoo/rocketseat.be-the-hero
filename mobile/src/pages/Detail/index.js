@@ -59,7 +59,7 @@ export default function Detail() {
             <View style={styles.incident}>
                 {/* Passamos um array dentro do objeto para remover a margem do fim do card */}
                 <Text style={[styles.incidentProperty, { marginTop: 0 } ]}>ONG:</Text>
-                <Text style={styles.incidentValue}> { incident.name } </Text>
+                <Text style={styles.incidentValue}> { incident.name }  de { incident.city } </Text>
                 
                 <Text style={styles.incidentProperty}>Caso:</Text>
                 <Text style={styles.incidentValue}> { incident.title } </Text>

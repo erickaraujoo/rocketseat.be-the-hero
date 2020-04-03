@@ -29,21 +29,14 @@ export default function Incidents() {
     async function loadIncidents() {
 
         // Para evitar que enquanto outra requisição seja feita, que mais uma aconteça
-        if(loading) {
-            return;
-        }
-
+        if(loading) return;
         // Para não buscar mais informações caso já tenha carregado todos os casos
-        if(total > 0 && incidents.length === total) {
-            return;
-        }
+        if(total > 0 && incidents.length === total) return;
 
         setLoading(true);
 
         // Enviando o número da página que estamos carregando na URL
-        const response = await api.get('incidents', { 
-            params: { page }
-        });
+        const response = await api.get('incidents', { params: { page } });
 
         // Invés de trocar os valores de incidents, anexa os novos que vieram dentro
         setIncidents([...incidents, ...response.data]);
