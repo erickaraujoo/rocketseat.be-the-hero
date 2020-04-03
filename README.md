@@ -47,7 +47,7 @@ From your command line:
 $ git clone https://github.com/erickaraujoo/be-the-hero
 
 # Go into the repository
-$ cd SemanaOmnistack11/backend
+$ cd be-the-hero/backend
 
 # Install dependencies
 $ yarn install
