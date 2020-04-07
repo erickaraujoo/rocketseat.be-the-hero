@@ -1,6 +1,7 @@
 const express = require('express');
 const routes = require('./routes');
 const cors = require('cors');
+const { errors } = require('celebrate');
 
 // Criando a aplicação
 const app = express();
@@ -19,6 +20,7 @@ app.use(cors());
 // Antes de todas as requisições, pede pro Express ir no corpo das requisições e tornar a requisição em formato JSON
 app.use(express.json());
 app.use(routes);
+app.use(errors());
 
 /**
  * Rota / Recuros
@@ -55,4 +57,4 @@ app.use(routes);
 
 // Faz o aplicativo ficar ouvindo a porta 3333
 // porta mais recomendada para a linguagem Node
-app.listen(3333);
+module.exports = app;
