@@ -38,5 +38,28 @@ describe('ONG', () => {
 
 
         // CONTINUA COM OS TESTES PARA TODOS OS RECURSOS
+    });
+
+    it('should be able to create a new incident', async () => {
+
+        const response = await request(app)
+            .post('/incidents')
+            .set({ authorization: 'd161b260' })
+            .send({
+                title: "Cachorros bebês",
+                description: "Descrição teste",
+                value: 450
+        })
+
+        expect(response.body).toHaveProperty('id');
     })
+
+    // it('should be able to consult all incidents', async () => {
+
+    //     const response = await request(app)
+    //         .get('/profile')
+    //         .set({ 'Authorization': 'd161b260' })
+
+    //     console.log(response);
+    // })
 })
